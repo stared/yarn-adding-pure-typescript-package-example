@@ -9,6 +9,21 @@ yarn add stared/quantum-tensors#master
 
 I changed a few things in build paths, and now it is fine.
 
+## New
+
+In quantum-tensors I added:
+
+```
+  "scripts": {
+    ...,
+    "postinstall": "tsc --outDir ./build"
+  }
+```
+
+Now it just works with `yarn add/upgrade` with no extra scripts.
+
+## Old
+
 Then, each time you want to upgrade quantum-tensors
 ```
 yarn upgrade quantum-tensors && cd node_modules/quantum-tensors && tsc --outDir ./build
