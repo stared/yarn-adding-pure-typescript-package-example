@@ -1,0 +1,20 @@
+{
+  "name": "aaaaa",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^24.0.18",
+    "ts-jest": "^24.1.0",
+    "ts-node": "^8.4.1",
+    "typedoc": "^0.15.0",
+    "typescript": "^3.6.3"
+  },
+  "dependencies": {
+    "quantum-tensors": "stared/quantum-tensors#master"
+  },
+  "scripts": {
+    "start": "tsc --outDir ./build && node ./build/main.js",
+    "upgrade-quantum-tensors": "yarn upgrade quantum-tensors && cd node_modules/quantum-tensors && tsc --outDir ./build"
+  }
+}
